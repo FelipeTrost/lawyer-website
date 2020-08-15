@@ -1,5 +1,5 @@
 // React
-import React, {useRef}  from 'react';
+import React, {useRef, useState}  from 'react';
 
 // Bootstrap
 import { Navbar,Nav, Container} from 'react-bootstrap'
@@ -11,7 +11,7 @@ import {  BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 // Frontend
 import './app.css';
-import MainFrontend from './components';
+import Components from './components';
 
 const App = () => {
   const navRef = useRef(null);
@@ -20,22 +20,13 @@ const App = () => {
   const questionsRef = useRef(null);
   const contactRef = useRef(null);
 
-  window.addEventListener('scroll', e => {
-    if(!navRef.current) return;
-    if(window.scrollY > 30){
-      navRef.current.classList.add("scrolled");
-    }else{
-      navRef.current.classList.remove("scrolled");
-    }
-  })
-
   return (
     <div className="App" >
       <Router>
       <header>
-        <Navbar collapseOnSelect  bg="transparent" variant="dark" fixed="top" ref={navRef}>
+        <Navbar collapseOnSelect  expand="md" bg="light" variant="light" fixed="top" ref={navRef}>
           <LinkContainer to="/">     
-            <Navbar.Brand href="#home">Avogado</Navbar.Brand>
+            <Navbar.Brand>Paremos el alza</Navbar.Brand>
           </LinkContainer>
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -59,11 +50,11 @@ const App = () => {
 
         <Container className="text-center">
             <h1>Detengamos el alza</h1>
-            <h2>Asi es</h2>
+            <h2>Acá un slogan</h2>
         </Container>
     </header>
         
-        <MainFrontend aboutRef={aboutRef} questionsRef={questionsRef} contactRef={contactRef} />     
+        <Components aboutRef={aboutRef} questionsRef={questionsRef} contactRef={contactRef} />     
 
         <Switch>
           <Route exact path="/" render={() => window.scrollTo({top: 0, behavior: 'smooth'}) } />
