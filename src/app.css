@@ -9,7 +9,7 @@ header > nav{
 header{
     height: 600px;
     max-height: 60%,;
-    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1)), url("https://images.unsplash.com/flagged/photo-1577474810448-82eb81a48d13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80") #0097A7;
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1)), url("https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80") #0097A7;
     background-size: cover;
     background-position: center 20% ;
     background-repeat: no-repeat;
