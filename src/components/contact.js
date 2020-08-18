@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Fontawesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 // Bootstrap
 import {Container, Form, Card, Button} from 'react-bootstrap'
@@ -12,8 +12,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const send = e => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
-    const list = Array.from(formData.entries());
+    // const formData = new FormData(e.target);
+    // const list = Array.from(formData.entries());
 
     alert("Todavía no disponible");
 }
