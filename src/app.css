@@ -38,9 +38,10 @@ section, footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: flex-start;
 }
 .card{
-    width: 22%;
+    width: 40%;
     min-width: 300px;
     padding: 5px;
     margin: 10px 5px;

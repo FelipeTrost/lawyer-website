@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Bootstrap
-import {Container, Card, Row} from 'react-bootstrap'
+import {Container, Card, Accordion, Button} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default ({reference}) => (
@@ -9,8 +9,7 @@ export default ({reference}) => (
         <Container>
             <h1 className="section-title">Preguntas frecuentes</h1>
 
-            <div className="cards">
-                {/* <Row sm={4}> */}
+            <Accordion className="cards">
                     {[
                         {
                             question: "¿Qué es una carta de adecuación?", 
@@ -39,14 +38,24 @@ export default ({reference}) => (
                     ].map((question, idx) => (
                         <Card className="Card" bg="dark" text="light" key={idx}>
                             <Card.Body>
-                                <Card.Title>{question.question}</Card.Title>
+                                <Card.Title>
+                                    <Accordion.Toggle as={Button} variant="dark" eventKey={idx}>
+                                        {question.question}
+                                    </Accordion.Toggle>
+                                </Card.Title>
                                 {/* <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle> */}
-                                <Card.Text> {question.answer.split('\n').map(p => <p>{p}</p>)} </Card.Text>
+                                
+                                <Accordion.Collapse eventKey={idx}>
+                                    <Card.Body>
+                                        {question.answer.split('\n').map((text, idx) => <p key={idx}>{text}</p>)}
+                                    </Card.Body>
+                                </Accordion.Collapse>
                             </Card.Body>
                         </Card>
+                       
                     ))}
-                {/* </Row> */}
-            </div>
+             </Accordion>
+            
         </Container>
     </section>
 )
