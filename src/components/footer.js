@@ -8,6 +8,8 @@ import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 // import {Container, Card, Row} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import logo from '../logo.png';
+
 export default ({reference}) => (
     <footer ref={reference}>
         <div className="items">
@@ -19,12 +21,12 @@ export default ({reference}) => (
             </div>
 
             <div>
-                <h3 className="text-uppercase section-title">Contácto</h3>
+                <h3 className="text-uppercase section-title">Contacto</h3>
+                <a href="mailto:paremoselalzaisapre@gmail.com">paremoselalzaisapre@gmail.com</a>
                 <a>Número telefónico</a>
-                <a>Correo</a>
             </div>
 
-            <h1 className="section-title">Nombre exitoso</h1>
+            <h1 className="section-title"><img src={logo} height="40px" width="40x" /> Paremos el alza</h1>
         </div>
     
         <div className="footer-copyright text-center py-3">© 2020 Derechos de autor: <a> Paremos el alza</a>

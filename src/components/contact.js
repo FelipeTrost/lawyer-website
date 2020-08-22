@@ -21,7 +21,7 @@ const send = e => {
 export default ({reference}) => (
     <section className="contact" id="contact" ref={reference}>
         <Container>
-            <h1 className="section-title">Contácto</h1>
+            <h1 className="section-title">Contacto</h1>
 
             <Card className="form">
                 <Form onSubmit={send}>

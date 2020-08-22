@@ -13,9 +13,10 @@ import {  BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './app.css';
 import Components from './components';
 
-const App = () => {
-  const navRef = useRef(null);
+// Media
+import logo from './logo.png';
 
+const App = () => {
   const aboutRef = useRef(null);
   const questionsRef = useRef(null);
   const contactRef = useRef(null);
@@ -24,9 +25,12 @@ const App = () => {
     <div className="App" >
       <Router>
       <header>
-        <Navbar collapseOnSelect  expand="md" bg="light" variant="light" fixed="top" ref={navRef}>
-          <LinkContainer to="/">     
+        <Navbar collapseOnSelect  expand="md" bg="light" variant="light" fixed="top">
+          <LinkContainer to="/">
+            <>     
+            <Navbar.Brand><img src={logo} height="30px" width="30x" /></Navbar.Brand>
             <Navbar.Brand>Paremos el alza</Navbar.Brand>
+            </>
           </LinkContainer>
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -49,10 +53,10 @@ const App = () => {
         </Navbar>
 
         <Container className="text-center">
-            <h1>Detengamos el alza</h1>
-            <h2>Acá un slogan</h2>
+            <h1>Paremos el alza</h1>
+            <h2>Tramitamos sin costo recursos de protección</h2>
         </Container>
-    </header>
+      </header>
         
         <Components aboutRef={aboutRef} questionsRef={questionsRef} contactRef={contactRef} />     
 
