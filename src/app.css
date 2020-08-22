@@ -9,7 +9,7 @@ header > nav{
 header{
     height: 600px;
     max-height: 60%,;
-    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.1)), url("https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80") #0097A7;
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80") #0097A7;
     background-size: cover;
     background-position: center 20% ;
     background-repeat: no-repeat;
@@ -23,12 +23,13 @@ header{
 }
 
 section, footer {
-    padding: 70px 25px;
+    padding: 70px 0;
     scroll-margin: 50px;
 }
 .section-title{
     font-weight: 300;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .cards{
@@ -43,9 +44,14 @@ section, footer {
 .card{
     width: 40%;
     min-width: 300px;
-    padding: 5px;
+    /* padding: 5px; */
     margin: 10px 5px;
 }
+
+.card .card-title.h5{
+    margin-bottom: 0;
+}
+
 .questions{
     background-color: #d1d0d0;
 }
@@ -70,6 +76,7 @@ footer{
     background-color: #000;
     color: #fff;
     padding-bottom: 20px;
+    padding: 10px 5%;
 }
 footer .items h3, footer .items h1{
     margin: 0;
@@ -78,16 +85,24 @@ footer .items{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     margin-bottom: 40px;
-    max-width: 800px;
-    
+    max-width: 1300px;
+    width: fit-content;
     margin: auto;
 }
 
-footer .items > *{
-    margin: 16px;
+footer .items > h1{
+    margin: 25px;
+}
+
+footer .items > div {
+    margin: 25px;
+}
+
+footer .items > div h3{
+    text-align: left;
 }
 
 footer .items a{
@@ -99,4 +114,8 @@ footer .items a{
 }
 footer .items .icon{
     font-size: 30px;
+}
+    
+footer .items > h1{
+    align-self: center;
 }
