@@ -23,7 +23,6 @@ export default ({reference}) => (
             <div>
                 <h3 className="text-uppercase section-title">Contacto</h3>
                 <a href="mailto:paremoselalzaisapre@gmail.com">paremoselalzaisapre@gmail.com</a>
-                <a>Número telefónico</a>
             </div>
 
             <h1 className="section-title"><img src={logo} height="40px" width="40x" /> Paremos el alza</h1>
