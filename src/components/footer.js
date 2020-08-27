@@ -25,10 +25,10 @@ export default ({reference}) => (
                 <a href="mailto:paremoselalzaisapre@gmail.com">paremoselalzaisapre@gmail.com</a>
             </div>
 
-            <h1 className="section-title"><img src={logo} height="40px" width="40x" /> Paremos el alza</h1>
+            <h1 className="section-title"><img src={logo} alt="paremoselalzaisapre.cl" height="70px" width="70x" /> Paremos el alza</h1>
         </div>
     
-        <div className="footer-copyright text-center py-3">© 2020 Derechos de autor: <a> Paremos el alza</a>
+        <div className="footer-copyright text-center py-3">© 2020 Derechos de autor: <b>paremoselalzaisapre.cl</b>
     </div>
   </footer>
 )
