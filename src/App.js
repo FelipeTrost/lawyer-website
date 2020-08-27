@@ -1,5 +1,5 @@
 // React
-import React, {useRef}  from 'react';
+import React, {useRef, useEffect, useState}  from 'react';
 
 // Bootstrap
 import { Navbar,Nav, Container} from 'react-bootstrap'
@@ -17,18 +17,35 @@ import Components from './components';
 import logo from './logo.png';
 
 const App = () => {
+  const [loaded, setLoaded]= useState(false);
+  const [success, setSuccess]= useState(null);
+
   const aboutRef = useRef(null);
   const questionsRef = useRef(null);
   const contactRef = useRef(null);
 
+
+  useEffect(() => {
+    setLoaded(true);
+    
+    const query = window.location.search;
+    const params = new URLSearchParams(query);
+    const success = params.get("success");
+
+    if(success !== null){
+      setSuccess(success);
+    }
+  }, [])
+
   return (
     <div className="App" >
       <Router>
+     
       <header>
-        <Navbar collapseOnSelect  expand="md" bg="light" variant="light" fixed="top">
+      <Navbar collapseOnSelect  expand="md" bg="light" variant="light" fixed="top">
           <LinkContainer to="/">
             <>     
-            <Navbar.Brand><img src={logo} height="30px" width="30x" /></Navbar.Brand>
+            <Navbar.Brand><img src={logo} alt="paremoselalzaisapre.cl logo" height="50px" width="50x" /></Navbar.Brand>
             <Navbar.Brand>Paremos el alza</Navbar.Brand>
             </>
           </LinkContainer>
@@ -57,15 +74,15 @@ const App = () => {
             <h2>Tramitamos sin costo recursos de protección</h2>
         </Container>
       </header>
-        
-        <Components aboutRef={aboutRef} questionsRef={questionsRef} contactRef={contactRef} />     
 
-        <Switch>
-          <Route exact path="/" render={() => window.scrollTo({top: 0, behavior: 'smooth'}) } />
+        <Components contactSuccess={success} contactClose={() => setSuccess(null)}  aboutRef={aboutRef} questionsRef={questionsRef} contactRef={contactRef} />       
+
+        {loaded && ( <Switch>
           <Route exact path="/quehacemos" render={() => aboutRef.current && aboutRef.current.scrollIntoView({behavior: 'smooth', block: "start",}) } />
           <Route exact path="/preguntas"  render={() => questionsRef.current && questionsRef.current.scrollIntoView({behavior: 'smooth', block: "start",}) } />
           <Route exact path="/contacto"   render={() => contactRef.current && contactRef.current.scrollIntoView({behavior: 'smooth', block: "start",}) } />
-        </Switch>
+          <Route exact path="/" render={() => window.scrollTo({top: 0, behavior: 'smooth'}) } />
+        </Switch>)}
       </Router>
     </div>
   );
