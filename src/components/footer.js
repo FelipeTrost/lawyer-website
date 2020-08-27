@@ -29,6 +29,6 @@ export default ({reference}) => (
         </div>
     
         <div className="footer-copyright text-center py-3">© 2020 Derechos de autor: <b>paremoselalzaisapre.cl</b>
-    </div>
-  </footer>
+        </div>
+    </footer>
 )
