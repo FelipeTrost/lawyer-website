@@ -25,7 +25,7 @@ export default ({reference}) => (
                 <a href="mailto:paremoselalzaisapre@gmail.com">paremoselalzaisapre@gmail.com</a>
             </div>
 
-            <h1 className="section-title"><img src={logo} alt="paremoselalzaisapre.cl" height="70px" width="70x" /> Paremos el alza</h1>
+            <h2 className="section-title"><img src={logo} alt="paremoselalzaisapre.cl" height="70px" width="70x" /> Paremos el alza Isapre</h2>
         </div>
     
         <div className="footer-copyright text-center py-3">© 2020 Derechos de autor: <b>paremoselalzaisapre.cl</b>

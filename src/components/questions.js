@@ -33,21 +33,21 @@ export default ({reference}) => (
                     },
                     {
                         question: "El alza no es significativa, ¿debería reclamar?", 
-                        answer: "Muchos afiliados creen que el alza de precio es insignificante, por lo que no le prestan atención a estas alzas. Sin embargo, existen buenas razones para tramitar un recurso de protección:\n1.	El precio base del plan es un factor multiplicador que se aplica para cada uno de los beneficiarios del plan, o sea, si la familia crece, esto se reflejará en el valor final del plan.\n2.	El precio base del plan es un factor multiplicador que se aplica para cada uno de los beneficiarios del plan, o sea, si la familia crece, esto se reflejará en el valor final del plan.\n3.	El precio base del plan es un factor multiplicador que se aplica para cada uno de los beneficiarios del plan, o sea, si la familia crece, esto se reflejará en el valor final del plan.\n4.	El precio base del plan es un factor multiplicador que se aplica para cada uno de los beneficiarios del plan, o sea, si la familia crece, esto se reflejará en el valor final del plan.\n* Según fuentes de la Superintendencia de Salud, el precio de un plan de Isapre ha aumentado en promedio:\n27,9% en planes BANMÉDICA.\n56,8% en planes CONSALUD.\n72,5% en planes COLMENA.\n85,6% en planes CRUZ BLANCA."
+                        answer: "Muchos afiliados creen que el alza de precio es insignificante, por lo que no le prestan atención a estas alzas. Sin embargo, existen buenas razones para tramitar un recurso de protección:\n1.	El precio base del plan es un factor multiplicador que se aplica para cada uno de los beneficiarios del plan, o sea, si la familia crece, esto se reflejará en el valor final del plan.\n2.	El precio base del plan es un factor multiplicador que se aplica para cada uno de los beneficiarios del plan, o sea, si la familia crece, esto se reflejará en el valor final del plan.\n3.	El precio base del plan es un factor multiplicador que se aplica para cada uno de los beneficiarios del plan, o sea, si la familia crece, esto se reflejará en el valor final del plan.\n4.	El precio base del plan es un factor multiplicador que se aplica para cada uno de los beneficiarios del plan, o sea, si la familia crece, esto se reflejará en el valor final del plan.\n* Según fuentes de la Superintendencia de Salud, el precio de un plan de Isapre ha aumentado en promedio:\n<b>27,9%</b> en planes BANMÉDICA.\n<b>56,8%</b> en planes CONSALUD.\n<b>72,5%</b> en planes COLMENA.\n<b>85,6%</b> en planes CRUZ BLANCA."
                     },
                 ].map((question, idx) => (
                     <Card className="Card" bg="dark" text="light" key={idx}>
                         <Card.Body>
                             <Card.Title>
                                 <Accordion.Toggle as={Button} variant="dark" eventKey={idx}>
-                                    {question.question}
+                                        {question.question}
                                 </Accordion.Toggle>
                             </Card.Title>
                             {/* <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle> */}
                                 
                             <Accordion.Collapse eventKey={idx}>
                                 <Card.Body>
-                                    {question.answer.split('\n').map((text, idx) => <p key={idx}>{text}</p>)}
+                                    {question.answer.split('\n').map((text, idx) => <p key={idx} dangerouslySetInnerHTML={{__html: text}} />)}
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card.Body>

@@ -1,5 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
 *{
     box-sizing: border-box;
+}
+
+body{
+    font-family: 'Questrial', sans-serif;
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+      font-size: 22px;
+    }
+    header .text-center h2{
+        font-size: 30px!important;
+    }
+    
+}
+
+.container p{
+    text-align: justify;
+    padding: 0 2%;
 }
 
 header > nav{
@@ -22,6 +44,15 @@ header{
     color: #fff;
 }
 
+header .text-center h1{
+    font-size: 48px;
+    margin-bottom: 35px;
+}
+
+header .text-center h2{
+    font-size: 25px;    
+}
+
 section, footer {
     padding: 70px 0;
     scroll-margin: 50px;
@@ -32,9 +63,12 @@ section, footer {
     text-align: center;
 }
 
-.cards{
-    padding: 1px;
+section > p{
+    text-align: justify;
+    /* font-size: 22px; */
+}
 
+.cards{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -50,6 +84,12 @@ section, footer {
 
 .card .card-title.h5{
     margin-bottom: 0;
+}
+
+.card .card-title.h5 button{
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-size: 18px;
 }
 
 .questions{
@@ -116,6 +156,6 @@ footer .items .icon{
     font-size: 30px;
 }
     
-footer .items > h1{
+footer .items > h2{
     align-self: center;
 }
