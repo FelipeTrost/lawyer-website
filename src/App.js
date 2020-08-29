@@ -53,8 +53,8 @@ const App = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">
-                                <LinkContainer to="/quehacemos">     
-                                    <Nav.Link>Que hacemos</Nav.Link>
+                                <LinkContainer to="/quienessomos">     
+                                    <Nav.Link>Quiénes somos</Nav.Link>
                                 </LinkContainer>
 
                                 <LinkContainer to="/preguntas">     
@@ -70,15 +70,15 @@ const App = () => {
                     </Navbar>
 
                     <Container className="text-center">
-                        <h1>Paremos el alza</h1>
-                        <h2>Tramitamos sin costo recursos de protección</h2>
+                        <h1>PAREMOS EL ALZA DE TU ISAPRE</h1>
+                        <h2>Tramitamos sin costo recursos de protección por alza en el precio base de tu plan.</h2>
                     </Container>
                 </header>
 
                 <Components contactSuccess={success} contactClose={() => setSuccess(null)}  aboutRef={aboutRef} questionsRef={questionsRef} contactRef={contactRef} />       
 
                 {loaded && ( <Switch>
-                    <Route exact path="/quehacemos" render={() => aboutRef.current && aboutRef.current.scrollIntoView({behavior: 'smooth', block: "start",}) } />
+                    <Route exact path="/quienessomos" render={() => aboutRef.current && aboutRef.current.scrollIntoView({behavior: 'smooth', block: "start",}) } />
                     <Route exact path="/preguntas"  render={() => questionsRef.current && questionsRef.current.scrollIntoView({behavior: 'smooth', block: "start",}) } />
                     <Route exact path="/contacto"   render={() => contactRef.current && contactRef.current.scrollIntoView({behavior: 'smooth', block: "start",}) } />
                     <Route exact path="/" render={() => window.scrollTo({top: 0, behavior: 'smooth'}) } />
